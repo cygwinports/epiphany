@@ -1,0 +1,7 @@
+category: Gnome Web
+requires: cygwin GConf2 gdk-pixbuf2 glib2 gtk2-x11 libX11_6 libdbus-glib_1_2 libdbus1_3 libglade2 libgnome2 libgnomeui2 libintl8 libnotify libxml2 libxslt pango python python-gobject2 python-gtk2 webkit
+sdesc: "GNOME web browser"
+ldesc: "Epiphany is the web browser for the GNOME desktop. Its goal is 
+to be simple and easy to use. Epiphany ties together many GNOME 
+components in order to let you focus on the Web content, instead of the 
+browser application."

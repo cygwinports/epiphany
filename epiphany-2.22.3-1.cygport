@@ -1,0 +1,7 @@
+inherit gnome2
+
+CYGCONF_ARGS="
+	--with-engine=webkit
+	--disable-network-manager
+	--disable-zeroconf
+"

@@ -1,14 +1,5 @@
 --- origsrc/epiphany-2.22.3/configure.ac	2008-06-30 12:58:18.000000000 -0500
 +++ src/epiphany-2.22.3/configure.ac	2008-07-10 14:24:16.562500000 -0500
-@@ -498,7 +498,7 @@
- EOF
- 
- 	if /bin/sh ../libtool --mode=compile ${CC} $PYTHON_CFLAGS -c testpython.c >/dev/null 2>&1 && \
--		/bin/sh ../libtool --mode=link ${CC} -o testpython.la -rpath `pwd` -module -avoid-version $PYTHON_LIB_LOC testpython.lo $PYTHON_LIBS $PYTHON_EXTRA_LIBS >/dev/null 2>&1 && \
-+		/bin/sh ../libtool --mode=link ${CC} -o testpython.la -rpath `pwd` -module -avoid-version -no-undefined $PYTHON_LIB_LOC testpython.lo $PYTHON_LIBS $PYTHON_EXTRA_LIBS >/dev/null 2>&1 && \
- 		grep 'dlname.*testpython' testpython.la >/dev/null 2>&1; then
- 		result=yes
- 	else
 @@ -758,6 +758,22 @@
  # uninstalled share dir to search data
  AC_DEFINE_UNQUOTED([SHARE_UNINSTALLED_DIR], ["`pwd`/data"], [path to source data dir])
@@ -41,36 +32,6 @@
 -Libs: -L${libdir}
 +Libs: -L${libdir} @EPHY_IMPLIB@
  Cflags: -I${includedir}
---- origsrc/epiphany-2.22.3/doc/reference/Makefile.am	2008-03-28 10:02:20.000000000 -0500
-+++ src/epiphany-2.22.3/doc/reference/Makefile.am	2008-07-10 14:24:16.593750000 -0500
-@@ -186,6 +186,7 @@
- 	$(GECKO_LIBS)	\
- 	$(GECKO_EXTRA_LIBS) \
- 	$(GECKO_GLUE_LIBS) \
-+	$(WEBKIT_LIBS) \
- 	$(DBUS_LIBS) \
- 	$(LIBINTL)
- 
---- origsrc/epiphany-2.22.3/doc/reference/epiphany.types	2007-12-16 07:57:17.000000000 -0600
-+++ src/epiphany-2.22.3/doc/reference/epiphany.types	2008-07-10 14:24:16.609375000 -0500
-@@ -25,8 +25,6 @@
- #include <ephy-cookie-manager.h>
- #include <ephy-password-manager.h>
- #include <ephy-permission-manager.h>
--#include <mozilla-embed.h>
--#include <mozilla-embed-persist.h>
- 
- ephy_embed_get_type
- downloader_view_get_type
-@@ -39,8 +37,6 @@
- ephy_cookie_manager_get_type
- ephy_permission_manager_get_type
- ephy_password_manager_get_type
--mozilla_embed_get_type
--mozilla_embed_persist_get_type
- 
- #include <ephy-window.h>
- #include <ephy-shell.h>
 --- origsrc/epiphany-2.22.3/src/Makefile.am	2008-03-28 10:02:20.000000000 -0500
 +++ src/epiphany-2.22.3/src/Makefile.am	2008-07-10 14:24:16.656250000 -0500
 @@ -209,6 +209,9 @@

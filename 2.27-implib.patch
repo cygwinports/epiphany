@@ -1,0 +1,55 @@
+--- origsrc/epiphany-2.27.1/configure.ac	2009-03-16 13:08:49.000000000 -0500
++++ src/epiphany-2.27.1/configure.ac	2009-03-30 01:17:53.875000000 -0500
+@@ -432,6 +432,19 @@ AM_CONDITIONAL([ENABLE_NETWORK_MANAGER],
+ # uninstalled share dir to search data
+ AC_DEFINE_UNQUOTED([SHARE_UNINSTALLED_DIR], ["`pwd`/data"], [path to source data dir])
+ 
++case "$host_os" in
++	cygwin*)
++		platform_win32=yes
++		EPHY_IMPLIB="-lepiphany-$EPIPHANY_API_VERSION"
++		;;
++	*)
++		platform_win32=no
++		EPHY_IMPLIB=
++		;;
++esac
++AC_SUBST(EPHY_IMPLIB)
++AM_CONDITIONAL(PLATFORM_WIN32, test "$platform_win32" = "yes")
++
+ # *******************************
+ # Add warning flags
+ # *******************************
+--- origsrc/epiphany-2.27.1/data/epiphany.pc.in	2009-02-02 03:52:49.000000000 -0600
++++ src/epiphany-2.27.1/data/epiphany.pc.in	2009-03-30 01:15:31.015625000 -0500
+@@ -13,5 +13,5 @@ Name: Epiphany Browser
+ Description: GNOME Web Browser
+ Version: @VERSION@
+ Requires: gtk+-2.0, libxml-2.0, webkit-1.0
+-Libs: -L${libdir}
++Libs: -L${libdir} @EPHY_IMPLIB@
+ Cflags: -I${includedir}
+--- origsrc/epiphany-2.27.1/src/Makefile.am	2009-03-13 02:28:07.000000000 -0500
++++ src/epiphany-2.27.1/src/Makefile.am	2009-03-30 01:22:13.109375000 -0500
+@@ -221,6 +221,10 @@ epiphany_CFLAGS = \
+ 
+ epiphany_LDFLAGS = -dlopen self
+ 
++if PLATFORM_WIN32
++epiphany_LDFLAGS += -Wl,--out-implib,libepiphany-$(EPIPHANY_API_VERSION).a
++endif
++
+ epiphany_LDADD = \
+ 	libephymain.la \
+ 	$(top_builddir)/src/bookmarks/libephybookmarks.la \
+@@ -590,3 +594,10 @@ EXTRA_DIST += Epiphany-$(EPIPHANY_API_VE
+ CLEANFILES += $(gir_DATA) $(typelibs_DATA)
+ 
+ endif # ENABLE_INTROSPECTION
++
++if PLATFORM_WIN32
++install-data-local:
++	$(mkinstalldirs) $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) libepiphany-$(EPIPHANY_API_VERSION).a $(DESTDIR)$(libdir)
++endif
++

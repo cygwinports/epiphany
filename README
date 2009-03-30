@@ -6,45 +6,45 @@ order to let you focus on the Web content, instead of the browser
 application.
 
 Runtime requirements:
-  cygwin-1.5.25-15
-  libdbus-glib_1_2-0.76-1
-  libdbus1_3-1.2.4-1
-  libgconf2_4-2.24.0-1
-  libgdk_pixbuf2.0_0-2.14.5-1
-  libglade2.0_0-2.6.3-2
+  cygwin-1.7.0-44
+  libdbus-glib_1_2-0.80-10
+  libdbus1_3-1.2.12-10
+  libgcc1-4.3.2-2
+  libgconf2_4-2.26.0-1
+  libgdk_pixbuf2.0_0-2.16.0-1
   libglib2.0_0-2.18.3-1
-  libgnome2_0-2.24.1-1
-  libgnomeui2_0-2.24.0-1
-  libgtk2.0_0-2.14.5-1
-  libintl8-0.17-2
-  libnotify1-0.4.5-1
-  libpango1.0_0-1.22.3-1
-  libwebkit1.0_1-1.0.3.39090-1
-  libX11_6-1.1.5-1
-  libxml2-2.6.32-2
-  libxslt-1.1.24-2
-  python-2.5.2-4
-  python-gobject2-2.15.4-1
-  python-gtk2-2.13.0-1
+  libgtk2.0_0-2.16.0-1
+  libICE6-1.0.5-10
+  libintl8-0.17-10
+  libnotify1-0.4.5-10
+  libpango1.0_0-1.24.0-1
+  libSM6-1.1.0-10
+  libsoup2.4_1-2.26.0-1
+  libwebkit1.0_2-1.1.3-1
+  libX11_6-1.2-10
+  libxml2-2.7.3-10
+  libxslt-1.1.24-10
+  python-2.5.4-1
+  python-gobject2-2.16.1-10
+  python-gtk2-2.14.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-1
-  automake1.10-1.10.1-2
+  autoconf2.5-2.63-10
+  automake1.10-1.10.1-10
   binutils-20080624-2
-  cygport-0.4.3-1
-  gawk-3.1.6-1
-  gcc-core-3.4.4-3
-  gcc-g++-3.4.4-3
-  gettext-devel-0.17-2
-  gnome-common-2.24.0-1
-  gnome-doc-utils-0.14.0-1
-  gtk-doc-1.11-1
-  intltool-0.40.5-1
-  libtool-2.2.6a-1
-  make-3.81-1
+  cygport-0.9.6-1
+  gawk-3.1.6-2
+  gcc4-core-3.4.4-3
+  gettext-devel-0.17-10
+  gnome-common-2.26.0-1
+  gnome-doc-utils-0.16.0-1
+  gtk-doc-1.11-2
+  intltool-0.40.6-1
+  libtool-2.2.7a-11
+  make-3.81-2
   pkg-config-0.23a-2
-  rarian-0.8.1-1
+  rarian-0.8.1-10
   sed-4.1.5-2
 
 Canonical website:
@@ -56,24 +56,23 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack epiphany-2.22.3-X-src.tar.bz2
+  unpack epiphany-2.27.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./epiphany-2.22.3-X.cygport all
+  cygport ./epiphany-2.27.1-X.cygport all
 
 This will create:
-  /usr/src/epiphany-2.22.3-X-src.tar.bz2
-  /usr/src/epiphany-2.22.3-X.tar.bz2
-  /usr/src/epiphany-devel-2.22.3-X.tar.bz2
+  /usr/src/epiphany-2.27.1-X-src.tar.bz2
+  /usr/src/epiphany-2.27.1-X.tar.bz2
+  /usr/src/epiphany-devel-2.27.1-X.tar.bz2
 
 -------------------------------------------
 
-Files included in the binary package:
+Files included in the binary packages:
 
-  /etc/gconf/schemas/epiphany-fonts.schemas
+(epiphany)
   /etc/gconf/schemas/epiphany-lockdown.schemas
-  /etc/gconf/schemas/epiphany-pango.schemas
   /etc/gconf/schemas/epiphany.schemas
   /etc/postinstall/epiphany.sh
   /etc/preremove/epiphany.sh
@@ -81,20 +80,15 @@ Files included in the binary package:
   /usr/share/applications/bme.desktop
   /usr/share/applications/epiphany.desktop
   /usr/share/dbus-1/services/org.gnome.Epiphany.service
-  /usr/share/doc/epiphany-2.24.2.1/AUTHORS
-  /usr/share/doc/epiphany-2.24.2.1/COPYING
-  /usr/share/doc/epiphany-2.24.2.1/ChangeLog
-  /usr/share/doc/epiphany-2.24.2.1/HACKING
-  /usr/share/doc/epiphany-2.24.2.1/MAINTAINERS
-  /usr/share/doc/epiphany-2.24.2.1/NEWS
-  /usr/share/doc/epiphany-2.24.2.1/README
-  /usr/share/doc/epiphany-2.24.2.1/TODO
+  /usr/share/doc/epiphany/AUTHORS
+  /usr/share/doc/epiphany/COPYING
+  /usr/share/doc/epiphany/ChangeLog
+  /usr/share/doc/epiphany/HACKING
+  /usr/share/doc/epiphany/MAINTAINERS
+  /usr/share/doc/epiphany/NEWS
+  /usr/share/doc/epiphany/README
+  /usr/share/doc/epiphany/TODO
   /usr/share/epiphany/about.ini
-  /usr/share/epiphany/chrome/app-chrome.manifest
-  /usr/share/epiphany/chrome/branding/brand.dtd
-  /usr/share/epiphany/chrome/branding/brand.properties
-  /usr/share/epiphany/chrome/global/about.xhtml
-  /usr/share/epiphany/default-prefs.js
   /usr/share/epiphany/ephy-xml2ini.xsl
   /usr/share/epiphany/epiphany-bookmark-editor-ui.xml
   /usr/share/epiphany/epiphany-bookmarks-html.xsl
@@ -104,11 +98,11 @@ Files included in the binary package:
   /usr/share/epiphany/epiphany-toolbar.xml
   /usr/share/epiphany/epiphany-ui.xml
   /usr/share/epiphany/epiphany.xhtml
-  /usr/share/epiphany/glade/certificate-dialogs.glade
-  /usr/share/epiphany/glade/epiphany.glade
-  /usr/share/epiphany/glade/form-signing-dialog.glade
-  /usr/share/epiphany/glade/prefs-dialog.glade
-  /usr/share/epiphany/glade/print.glade
+  /usr/share/epiphany/glade/certificate-dialogs.ui
+  /usr/share/epiphany/glade/epiphany.ui
+  /usr/share/epiphany/glade/form-signing-dialog.ui
+  /usr/share/epiphany/glade/prefs-dialog.ui
+  /usr/share/epiphany/glade/print.ui
   /usr/share/epiphany/icons/hicolor/16x16/actions/bookmark-view.png
   /usr/share/epiphany/icons/hicolor/16x16/actions/history-view.png
   /usr/share/epiphany/icons/hicolor/16x16/actions/location-entry.png
@@ -279,7 +273,9 @@ Files included in the binary package:
   /usr/share/locale/hi/LC_MESSAGES/epiphany.mo
   /usr/share/locale/hr/LC_MESSAGES/epiphany.mo
   /usr/share/locale/hu/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/hy/LC_MESSAGES/epiphany.mo
   /usr/share/locale/id/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/ig/LC_MESSAGES/epiphany.mo
   /usr/share/locale/is/LC_MESSAGES/epiphany.mo
   /usr/share/locale/it/LC_MESSAGES/epiphany.mo
   /usr/share/locale/ja/LC_MESSAGES/epiphany.mo
@@ -305,6 +301,7 @@ Files included in the binary package:
   /usr/share/locale/or/LC_MESSAGES/epiphany.mo
   /usr/share/locale/pa/LC_MESSAGES/epiphany.mo
   /usr/share/locale/pl/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/ps/LC_MESSAGES/epiphany.mo
   /usr/share/locale/pt/LC_MESSAGES/epiphany.mo
   /usr/share/locale/pt_BR/LC_MESSAGES/epiphany.mo
   /usr/share/locale/ro/LC_MESSAGES/epiphany.mo
@@ -315,7 +312,7 @@ Files included in the binary package:
   /usr/share/locale/sl/LC_MESSAGES/epiphany.mo
   /usr/share/locale/sq/LC_MESSAGES/epiphany.mo
   /usr/share/locale/sr/LC_MESSAGES/epiphany.mo
-  /usr/share/locale/sr@latin/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/sr@Latn/LC_MESSAGES/epiphany.mo
   /usr/share/locale/sv/LC_MESSAGES/epiphany.mo
   /usr/share/locale/ta/LC_MESSAGES/epiphany.mo
   /usr/share/locale/te/LC_MESSAGES/epiphany.mo
@@ -323,8 +320,11 @@ Files included in the binary package:
   /usr/share/locale/tk/LC_MESSAGES/epiphany.mo
   /usr/share/locale/tr/LC_MESSAGES/epiphany.mo
   /usr/share/locale/uk/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/uz/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/uz@cyrillic/LC_MESSAGES/epiphany.mo
   /usr/share/locale/vi/LC_MESSAGES/epiphany.mo
   /usr/share/locale/wa/LC_MESSAGES/epiphany.mo
+  /usr/share/locale/yo/LC_MESSAGES/epiphany.mo
   /usr/share/locale/zh_CN/LC_MESSAGES/epiphany.mo
   /usr/share/locale/zh_HK/LC_MESSAGES/epiphany.mo
   /usr/share/locale/zh_TW/LC_MESSAGES/epiphany.mo
@@ -349,60 +349,62 @@ Files included in the binary package:
   /usr/share/omf/epiphany/epiphany-uk.omf
 
 (epiphany-devel)
-  /usr/include/epiphany/2.24/epiphany/ephy-adblock-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-adblock.h
-  /usr/include/epiphany/2.24/epiphany/ephy-base-embed.h
-  /usr/include/epiphany/2.24/epiphany/ephy-bookmarks-type-builtins.h
-  /usr/include/epiphany/2.24/epiphany/ephy-bookmarks.h
-  /usr/include/epiphany/2.24/epiphany/ephy-command-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-cookie-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-dbus.h
-  /usr/include/epiphany/2.24/epiphany/ephy-dialog.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-container.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-event.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-factory.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-persist.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-prefs.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-shell.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-single.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-type-builtins.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed-utils.h
-  /usr/include/epiphany/2.24/epiphany/ephy-embed.h
-  /usr/include/epiphany/2.24/epiphany/ephy-extension.h
-  /usr/include/epiphany/2.24/epiphany/ephy-extensions-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-history-item.h
-  /usr/include/epiphany/2.24/epiphany/ephy-history.h
-  /usr/include/epiphany/2.24/epiphany/ephy-lib-type-builtins.h
-  /usr/include/epiphany/2.24/epiphany/ephy-link.h
-  /usr/include/epiphany/2.24/epiphany/ephy-loader.h
-  /usr/include/epiphany/2.24/epiphany/ephy-node-db.h
-  /usr/include/epiphany/2.24/epiphany/ephy-node.h
-  /usr/include/epiphany/2.24/epiphany/ephy-notebook.h
-  /usr/include/epiphany/2.24/epiphany/ephy-password-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-permission-manager.h
-  /usr/include/epiphany/2.24/epiphany/ephy-session.h
-  /usr/include/epiphany/2.24/epiphany/ephy-shell.h
-  /usr/include/epiphany/2.24/epiphany/ephy-state.h
-  /usr/include/epiphany/2.24/epiphany/ephy-statusbar.h
-  /usr/include/epiphany/2.24/epiphany/ephy-type-builtins.h
-  /usr/include/epiphany/2.24/epiphany/ephy-version.h
-  /usr/include/epiphany/2.24/epiphany/ephy-window.h
-  /usr/lib/libepiphany-2.24.a
-  /usr/lib/pkgconfig/epiphany-2.24.pc
+  /usr/include/epiphany/2.27/epiphany/ephy-adblock-manager.h
+  /usr/include/epiphany/2.27/epiphany/ephy-adblock.h
+  /usr/include/epiphany/2.27/epiphany/ephy-base-embed.h
+  /usr/include/epiphany/2.27/epiphany/ephy-bookmarks-type-builtins.h
+  /usr/include/epiphany/2.27/epiphany/ephy-bookmarks.h
+  /usr/include/epiphany/2.27/epiphany/ephy-command-manager.h
+  /usr/include/epiphany/2.27/epiphany/ephy-dbus.h
+  /usr/include/epiphany/2.27/epiphany/ephy-dialog.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-container.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-event.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-factory.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-persist.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-prefs.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-shell.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-single.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-type-builtins.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed-utils.h
+  /usr/include/epiphany/2.27/epiphany/ephy-embed.h
+  /usr/include/epiphany/2.27/epiphany/ephy-extension.h
+  /usr/include/epiphany/2.27/epiphany/ephy-extensions-manager.h
+  /usr/include/epiphany/2.27/epiphany/ephy-history.h
+  /usr/include/epiphany/2.27/epiphany/ephy-lib-type-builtins.h
+  /usr/include/epiphany/2.27/epiphany/ephy-link.h
+  /usr/include/epiphany/2.27/epiphany/ephy-loader.h
+  /usr/include/epiphany/2.27/epiphany/ephy-node-db.h
+  /usr/include/epiphany/2.27/epiphany/ephy-node.h
+  /usr/include/epiphany/2.27/epiphany/ephy-notebook.h
+  /usr/include/epiphany/2.27/epiphany/ephy-password-manager.h
+  /usr/include/epiphany/2.27/epiphany/ephy-permission-manager.h
+  /usr/include/epiphany/2.27/epiphany/ephy-session.h
+  /usr/include/epiphany/2.27/epiphany/ephy-shell.h
+  /usr/include/epiphany/2.27/epiphany/ephy-state.h
+  /usr/include/epiphany/2.27/epiphany/ephy-statusbar.h
+  /usr/include/epiphany/2.27/epiphany/ephy-type-builtins.h
+  /usr/include/epiphany/2.27/epiphany/ephy-window.h
+  /usr/include/epiphany/2.27/epiphany/epiphany.h
+  /usr/lib/libepiphany-2.27.a
+  /usr/lib/pkgconfig/epiphany-2.27.pc
   /usr/share/aclocal/epiphany.m4
   /usr/share/gtk-doc/html/epiphany/EphyCommandManager.html
   /usr/share/gtk-doc/html/epiphany/EphyEmbed.html
+  /usr/share/gtk-doc/html/epiphany/EphyLocationEntry.html
   /usr/share/gtk-doc/html/epiphany/EphyNodeDb.html
+  /usr/share/gtk-doc/html/epiphany/EphySearchEntry.html
+  /usr/share/gtk-doc/html/epiphany/EphySpinner.html
   /usr/share/gtk-doc/html/epiphany/EphyWindow.html
+  /usr/share/gtk-doc/html/epiphany/EphyZoomControl.html
   /usr/share/gtk-doc/html/epiphany/ch01.html
   /usr/share/gtk-doc/html/epiphany/ch02.html
+  /usr/share/gtk-doc/html/epiphany/ch03.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedFactory.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedPersist.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedSingle.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyExtensionsManager.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyGlade.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyPermissionManager.html
-  /usr/share/gtk-doc/html/epiphany/epiphany-ephy-cookie-manager.html
   /usr/share/gtk-doc/html/epiphany/epiphany-ephy-password-manager.html
   /usr/share/gtk-doc/html/epiphany/epiphany-ephy-session.html
   /usr/share/gtk-doc/html/epiphany/epiphany-ephy-shell.html
@@ -421,11 +423,8 @@ Files included in the binary package:
 
 Port Notes:
 
------ version 2.22.3-1 -----
-Version bump.
-
------ version 2.22.2-1 -----
-Initial release for Cygwin.
+----- version 2.27.1-1 -----
+Initial release of GNOME 2.26 for Cygwin 1.7.
 
 
 Cygwin port maintained by:

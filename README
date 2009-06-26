@@ -6,7 +6,7 @@ order to let you focus on the Web content, instead of the browser
 application.
 
 Runtime requirements:
-  cygwin-1.7.0-48
+  cygwin-1.7.0-50
   libdbus-glib_1_2-0.80-10
   libdbus1_3-1.2.14-1
   libgcc1-4.3.2-2
@@ -21,19 +21,16 @@ Runtime requirements:
   libSM6-1.1.0-10
   libsoup2.4_1-2.26.2-1
   libwebkit1.0_2-1.1.8-1
-  libX11_6-1.2-10
+  libX11_6-1.2.1-1
   libxml2-2.7.3-10
   libxslt-1.1.24-10
-  python-2.5.4-1
-  python-gobject2-2.16.1-10
-  python-gtk2-2.14.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
   automake1.10-1.10.2-10
   binutils-20080624-2
-  cygport-0.9.6-1
+  cygport-0.9.7-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gettext-devel-0.17-10
@@ -41,9 +38,9 @@ Build requirements:
   gnome-doc-utils-0.16.1-2
   gtk-doc-1.11-2
   intltool-0.40.6-1
-  libtool-2.2.7a-12
+  libtool-2.2.7a-13
   make-3.81-2
-  pkg-config-0.23a-2
+  pkg-config-0.23b-10
   rarian-0.8.1-11
   sed-4.1.5-2
 
@@ -56,16 +53,16 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack epiphany-2.27.2-X-src.tar.bz2
+  unpack epiphany-2.27.3-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./epiphany-2.27.2-X.cygport all
+  cygport ./epiphany-2.27.3-X.cygport all
 
 This will create:
-  /usr/src/epiphany-2.27.2-X-src.tar.bz2
-  /usr/src/epiphany-2.27.2-X.tar.bz2
-  /usr/src/epiphany-devel-2.27.2-X.tar.bz2
+  /usr/src/epiphany-2.27.3-X-src.tar.bz2
+  /usr/src/epiphany-2.27.3-X.tar.bz2
+  /usr/src/epiphany-devel-2.27.3-X.tar.bz2
 
 -------------------------------------------
 
@@ -351,7 +348,6 @@ Files included in the binary packages:
 (epiphany-devel)
   /usr/include/epiphany/2.27/epiphany/ephy-adblock-manager.h
   /usr/include/epiphany/2.27/epiphany/ephy-adblock.h
-  /usr/include/epiphany/2.27/epiphany/ephy-base-embed.h
   /usr/include/epiphany/2.27/epiphany/ephy-bookmarks-type-builtins.h
   /usr/include/epiphany/2.27/epiphany/ephy-bookmarks.h
   /usr/include/epiphany/2.27/epiphany/ephy-command-manager.h
@@ -359,7 +355,6 @@ Files included in the binary packages:
   /usr/include/epiphany/2.27/epiphany/ephy-dialog.h
   /usr/include/epiphany/2.27/epiphany/ephy-embed-container.h
   /usr/include/epiphany/2.27/epiphany/ephy-embed-event.h
-  /usr/include/epiphany/2.27/epiphany/ephy-embed-factory.h
   /usr/include/epiphany/2.27/epiphany/ephy-embed-persist.h
   /usr/include/epiphany/2.27/epiphany/ephy-embed-prefs.h
   /usr/include/epiphany/2.27/epiphany/ephy-embed-shell.h
@@ -383,6 +378,7 @@ Files included in the binary packages:
   /usr/include/epiphany/2.27/epiphany/ephy-state.h
   /usr/include/epiphany/2.27/epiphany/ephy-statusbar.h
   /usr/include/epiphany/2.27/epiphany/ephy-type-builtins.h
+  /usr/include/epiphany/2.27/epiphany/ephy-web-view.h
   /usr/include/epiphany/2.27/epiphany/ephy-window.h
   /usr/include/epiphany/2.27/epiphany/epiphany.h
   /usr/lib/libepiphany-2.27.a
@@ -399,7 +395,6 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/epiphany/ch01.html
   /usr/share/gtk-doc/html/epiphany/ch02.html
   /usr/share/gtk-doc/html/epiphany/ch03.html
-  /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedFactory.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedPersist.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyEmbedSingle.html
   /usr/share/gtk-doc/html/epiphany/epiphany-EphyExtensionsManager.html
@@ -417,11 +412,13 @@ Files included in the binary packages:
   /usr/share/gtk-doc/html/epiphany/right.png
   /usr/share/gtk-doc/html/epiphany/style.css
   /usr/share/gtk-doc/html/epiphany/up.png
-  /usr/share/pygtk/2.0/defs/epiphany.defs
 
 ------------------
 
 Port Notes:
+
+----- version 2.27.3-1 -----
+Version bump.
 
 ----- version 2.27.2-1 -----
 Version bump.

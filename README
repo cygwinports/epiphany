@@ -6,39 +6,42 @@ order to let you focus on the Web content, instead of the browser
 application.
 
 Runtime requirements:
-  cygwin-1.7.0-50
+  cygwin-1.7.0-60
   libdbus-glib_1_2-0.80-10
   libdbus1_3-1.2.14-1
   libgcc1-4.3.2-2
   libgconf2_4-2.26.2-1
-  libgdk_pixbuf2.0_0-2.16.2-1
-  libglib2.0_0-2.20.3-1
-  libgtk2.0_0-2.16.2-1
+  libgdk_pixbuf2.0_0-2.16.5-1
+  libgirepository1.0_0-0.6.5-1
+  libglib2.0_0-2.20.5-1
+  libgtk2.0_0-2.16.5-1
   libICE6-1.0.5-10
   libintl8-0.17-10
   libnotify1-0.4.5-10
-  libpango1.0_0-1.24.2-1
+  libpango1.0_0-1.24.5-1
+  libseed0-2.27.92-1
   libSM6-1.1.0-10
-  libsoup2.4_1-2.26.2-1
-  libwebkit1.0_2-1.1.8-1
-  libX11_6-1.2.1-1
-  libxml2-2.7.3-10
+  libsoup2.4_1-2.26.3-1
+  libwebkit1.0_2-1.1.10-1
+  libX11_6-1.2.2-1
+  libxml2-2.7.3-11
   libxslt-1.1.24-10
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
   automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
+  binutils-2.19.51-1
+  cygport-0.9.9-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gettext-devel-0.17-10
   gnome-common-2.26.0-2
   gnome-doc-utils-0.16.1-2
+  gobject-introspection-0.6.5-1
   gtk-doc-1.11-2
   intltool-0.40.6-1
-  libtool-2.2.7a-13
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   rarian-0.8.1-11
@@ -74,6 +77,7 @@ Files included in the binary packages:
   /etc/postinstall/epiphany.sh
   /etc/preremove/epiphany.sh
   /usr/bin/epiphany.exe
+  /usr/lib/girepository-1.0/Epiphany-2.27.typelib
   /usr/share/applications/bme.desktop
   /usr/share/applications/epiphany.desktop
   /usr/share/dbus-1/services/org.gnome.Epiphany.service
@@ -384,6 +388,7 @@ Files included in the binary packages:
   /usr/lib/libepiphany-2.27.a
   /usr/lib/pkgconfig/epiphany-2.27.pc
   /usr/share/aclocal/epiphany.m4
+  /usr/share/gir-1.0/Epiphany-2.27.gir
   /usr/share/gtk-doc/html/epiphany/EphyCommandManager.html
   /usr/share/gtk-doc/html/epiphany/EphyEmbed.html
   /usr/share/gtk-doc/html/epiphany/EphyLocationEntry.html
@@ -416,6 +421,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 2.27.3-2 -----
+Added support for Seed Javascript extensions.
 
 ----- version 2.27.3-1 -----
 Version bump.

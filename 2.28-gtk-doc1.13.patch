@@ -1,0 +1,11 @@
+--- origsrc/epiphany-2.28.2/doc/reference/Makefile.am	2009-12-16 04:26:26.000000000 -0600
++++ src/epiphany-2.28.2/doc/reference/Makefile.am	2010-01-21 23:03:02.844390300 -0600
+@@ -242,7 +242,7 @@ html-build.stamp: sgml.stamp $(DOC_MAIN_
+ 	cd $(srcdir)/html && gtkdoc-mkhtml $(DOC_MODULE) ../$(DOC_MAIN_SGML_FILE)
+ 	test "x$(HTML_IMAGES)" = "x" || ( cd $(srcdir) && cp $(HTML_IMAGES) html )
+ 	@echo '-- Fixing Crossreferences' 
+-	cd $(srcdir) && gtkdoc-fixxref --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
++	cd $(srcdir) && gtkdoc-fixxref --module=$(DOC_MODULE) --module-dir=html --html-dir=$(HTML_DIR) $(FIXXREF_OPTIONS)
+ 	touch html-build.stamp
+ endif
+ 

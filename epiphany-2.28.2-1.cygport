@@ -3,6 +3,7 @@ inherit gnome2
 DESCRIPTION="GNOME web browser"
 
 PATCH_URI="2.27-implib.patch
+           2.28-gtk-doc1.13.patch
            2.28-introspection.patch"
 
 PKG_NAMES="${PN} ${PN}-devel"

@@ -1,0 +1,20 @@
+--- origsrc/epiphany-2.30.2/src/Makefile.am	2010-04-08 09:09:41.000000000 -0500
++++ src/epiphany-2.30.2/src/Makefile.am	2010-06-28 03:23:41.821562500 -0500
+@@ -334,7 +334,7 @@ EPHY_GIR_C_FILES = \
+ 	$(NULL)
+ 
+ Epiphany-$(EPIPHANY_API_VERSION).gir: $(INTROSPECTION_SCANNER) $(EPHY_GIR_H_FILES) \
+-                                      $(EPHY_GIR_C_FILES) epiphany
++                                      $(EPHY_GIR_C_FILES) epiphany$(EXEEXT)
+ 	$(AM_V_GEN) PKG_CONFIG_PATH=$(top_builddir)/data:$$PKG_CONFIG_PATH \
+ 	$(INTROSPECTION_SCANNER) -v \
+ 		--namespace Epiphany \
+@@ -344,7 +344,7 @@ Epiphany-$(EPIPHANY_API_VERSION).gir: $(
+ 		--include=Gtk-2.0 \
+ 		--include=libxml2-2.0 \
+ 		--include=WebKit-1.0 \
+-		--program=./epiphany \
++		--program=./epiphany$(EXEEXT) \
+ 		--output $@ \
+ 		--pkg epiphany-$(EPIPHANY_API_VERSION) \
+ 		-DEPIPHANY_COMPILATION \

@@ -1,5 +1,5 @@
 category: Gnome Web
-requires: GConf2 gobject-introspection-Gtk2.0 gobject-introspection-Soup2.4 gobject-introspection-WebKit1.0 libdbus-glib_1_2 libdbus1_3 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgirepository1.0_0 libgnome-keyring0 libgtk2.0_0 libICE6 libintl8 libnotify1 libnspr4 libnss3 libpango1.0_0 libseed0 libSM6 libsoup2.4_1 libsoup-gnome2.4_1 libwebkit1.0_2 libX11_6 libxml2 libxslt
+requires: GConf2 gobject-introspection-Gtk2.0 gobject-introspection-Soup2.4 gobject-introspection-WebKit1.0 libcairo2 libdbus-glib_1_2 libdbus1_3 libgconf2_4 libgdk_pixbuf2.0_0 libglib2.0_0 libgirepository1.0_1 libgnome-keyring0 libgtk2.0_0 libICE6 libintl8 libnotify1 libnspr4 libnss3 libpango1.0_0 libseed0 libSM6 libsoup2.4_1 libsoup-gnome2.4_1 libwebkit1.0_2 libX11_6 libxml2 libxslt
 sdesc: "GNOME web browser"
 ldesc: "Epiphany is the web browser for the GNOME desktop. Its goal is 
 to be simple and easy to use. Epiphany ties together many GNOME 

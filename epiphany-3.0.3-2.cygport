@@ -19,5 +19,5 @@ CYGCONF_ARGS="
 	--disable-introspection
 	--disable-network-manager
 	--disable-zeroconf
-	--without-ca-file
+	--with-ca-file=/usr/ssl/certs/ca-bundle.crt
 "

@@ -18,6 +18,5 @@ epiphany_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig usr/share/a
 CYGCONF_ARGS="
 	--disable-introspection
 	--disable-network-manager
-	--disable-zeroconf
 	--with-ca-file=/usr/ssl/certs/ca-bundle.crt
 "

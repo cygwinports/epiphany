@@ -4,8 +4,7 @@ DESCRIPTION="GNOME web browser"
 
 PATCH_URI="
 	2.30-implib.patch
-	3.0.0-introspection.patch
-	3.0.0-webkitgtk-1_3_12.patch
+	3.4.1-introspection.patch
 "
 
 PKG_NAMES="${PN} ${PN}-devel"

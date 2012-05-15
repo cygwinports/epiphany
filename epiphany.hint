@@ -1,5 +1,5 @@
 category: Gnome Web
-requires: ca-certificates libavahi-client3 libavahi-common3 libavahi-gobject0 libcairo2 libdbus-glib_1_2 libdbus1_3 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-keyring0 libgtk3_0 libICE6 libintl8 libnspr4 libnss3 libpango1.0_0 libSM6 libsoup2.4_1 libsoup-gnome2.4_1 libwebkitgtk3.0_0 libX11_6 libxml2 libxslt
+requires: ca-certificates libavahi-client3 libavahi-common3 libavahi-gobject0 libcairo2 libgdk_pixbuf2.0_0 libglib2.0_0 libgnome-keyring0 libgtk3_0 libICE6 libintl8 libnotify4 libnspr4 libnss3 libpango1.0_0 libSM6 libsoup2.4_1 libsoup-gnome2.4_1 libsqlite3_0 libwebkitgtk3.0_0 libX11_6 libxml2 libxslt
 sdesc: "GNOME web browser"
 ldesc: "Epiphany is the web browser for the GNOME desktop. Its goal is 
 to be simple and easy to use. Epiphany ties together many GNOME 

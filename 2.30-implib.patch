@@ -36,7 +36,7 @@
  epiphany_LDFLAGS = -dlopen self
  
 +if PLATFORM_WIN32
-+epiphany_LDFLAGS += -Wl,--out-implib,libepiphany-$(EPIPHANY_API_VERSION).a
++epiphany_LDFLAGS += -Wl,--out-implib,libepiphany-$(EPIPHANY_API_VERSION).dll.a
 +endif
 +
  epiphany_LDADD = \
@@ -50,5 +50,5 @@
 +if PLATFORM_WIN32
 +install-data-local:
 +	$(mkinstalldirs) $(DESTDIR)$(libdir)
-+	$(INSTALL_DATA) libepiphany-$(EPIPHANY_API_VERSION).a $(DESTDIR)$(libdir)
++	$(INSTALL_DATA) libepiphany-$(EPIPHANY_API_VERSION).dll.a $(DESTDIR)$(libdir)
 +endif

@@ -1,8 +1,0 @@
-category: Gnome Web
-requires: epiphany libglib2.0-devel libgtk3-devel libwebkitgtk3.0-devel libxml2-devel
-external-source: epiphany
-sdesc: "GNOME web browser (plugin development files)"
-ldesc: "Epiphany is the web browser for the GNOME desktop. Its goal is 
-to be simple and easy to use. Epiphany ties together many GNOME 
-components in order to let you focus on the Web content, instead of the 
-browser application."

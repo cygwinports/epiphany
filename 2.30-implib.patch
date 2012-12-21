@@ -43,9 +43,9 @@
  	libephymain.la \
  	$(top_builddir)/src/bookmarks/libephybookmarks.la \
 @@ -368,3 +372,9 @@ Epiphany-$(EPIPHANY_API_VERSION).typelib
- CLEANFILES += $(gir_DATA) $(typelibs_DATA)
  
  endif # HAVE_INTROSPECTION
+ endif # !WITH_WEBKIT2
 +
 +if PLATFORM_WIN32
 +install-data-local:

@@ -2,7 +2,7 @@ inherit gnome2
 
 NAME="epiphany"
 VERSION=3.6.1
-RELEASE=1
+RELEASE=2
 CATEGORY="GNOME Web"
 SUMMARY="GNOME web browser"
 DESCRIPTION="Epiphany is the web browser for the GNOME desktop. Its goal is

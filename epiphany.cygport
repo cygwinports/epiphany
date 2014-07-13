@@ -1,30 +1,22 @@
 inherit gnome2
 
 NAME="epiphany"
-VERSION=3.6.1
-RELEASE=3
+VERSION=3.8.2
+RELEASE=1
 CATEGORY="GNOME Web"
 SUMMARY="GNOME web browser"
 DESCRIPTION="Epiphany is the web browser for the GNOME desktop. Its goal is
 to be simple and easy to use. Epiphany ties together many GNOME components in
 order to let you focus on the Web content, instead of the browser application."
 
-PATCH_URI="
-	2.30-implib.patch
-	3.4.1-introspection.patch
-"
+PATCH_URI="3.8.2-webkit1.patch"
 
-PKG_NAMES="${PN} ${PN}-devel"
-epiphany_REQUIRES="ca-certificates iso-codes"
-epiphany_CONTENTS="--exclude=aclocal --exclude=gir-1.0 --exclude=gtk-doc
-                   etc/ usr/bin/ usr/share/"
-epiphany_devel_SUMMARY="${SUMMARY} (plugin development)"
-epiphany_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig usr/share/aclocal/
-                         usr/share/gtk-doc/"
+REQUIRES="ca-certificates iso-codes"
+# adblock merged with core; extensions are no longer supported
+OBSOLETES="epiphany-devel epiphany-extensions"
 
-# introspection: only need for Seed-based plugins (currently nonexistant)
+# nss: only used for migrating from Mozilla profiles
 CYGCONF_ARGS="
-	--disable-introspection
 	--disable-network-manager
 	--disable-nss
 	--with-ca-file=/usr/ssl/certs/ca-bundle.crt

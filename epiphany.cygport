@@ -2,7 +2,7 @@ inherit gnome2
 
 NAME="epiphany"
 VERSION=3.8.2
-RELEASE=1
+RELEASE=2
 CATEGORY="GNOME Web"
 SUMMARY="GNOME web browser"
 DESCRIPTION="Epiphany is the web browser for the GNOME desktop. Its goal is
@@ -19,5 +19,5 @@ OBSOLETES="epiphany-devel epiphany-extensions"
 CYGCONF_ARGS="
 	--disable-network-manager
 	--disable-nss
-	--with-ca-file=/usr/ssl/certs/ca-bundle.crt
+	--with-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 "
